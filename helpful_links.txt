@@ -1,0 +1,22 @@
+Link to info on blast output format
+  https://www.biostars.org/p/88944/
+
+  The good stuff from Link
+  -outfmt <String>
+   alignment view options:
+     0 = pairwise,
+     1 = query-anchored showing identities,
+     2 = query-anchored no identities,
+     3 = flat query-anchored, show identities,
+     4 = flat query-anchored, no identities,
+     5 = XML Blast output,
+     6 = tabular,
+     7 = tabular with comment lines,
+     8 = Text ASN.1,
+     9 = Binary ASN.1,
+    10 = Comma-separated values,
+    11 = BLAST archive format (ASN.1)
+
+    Options 6, 7, and 10 can be additionally configured to produce
+   a custom format specified by space delimited format specifiers.
+   (See link for list of all filters)
