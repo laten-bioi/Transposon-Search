@@ -4,7 +4,7 @@ def main(): #main method
         makeBlastBD('G.Max',db,'data' ) #need output location
 
     with open('transposons') as query:
-        searchBlastDB() #add parameters
+        searchBlastDB('G.Max','GMR30_data/GMR30_ids.fasta','GMR30_data/results.txt') #add parameters
 
 
 
