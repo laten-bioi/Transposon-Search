@@ -6,7 +6,7 @@ def makeBlastBD(title, inputFilePath, out): #Will create local BLASTn database t
 
 def searchBlastDB(queryFile, DBname, outputFile): #searches 1 element in the local BLASTn database
 
-     os.system("blastn -query {} -db {} -out {} -outfmt ""10 qstart qend evalue pident"".format(filePath,DBname,outputFile))
+     os.system("blastn -query {} -db {} -out {} -outfmt ""10 qseqid qstart qend evalue pident"".format(filePath,DBname,outputFile))
     #Will search for all elements in query file as long as in fasta format
     #Adds the start, end, evalue and p identity
 
