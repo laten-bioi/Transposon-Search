@@ -17,4 +17,3 @@ Expand dataset to include other transposable elements of interest and follow sam
 ### Additional Info
 All BLAST results for each element should be retained in someway that is yet to be
 determined
-Adding some more info

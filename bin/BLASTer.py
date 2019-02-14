@@ -1,12 +1,14 @@
+import os
 
-def createBlastBD(): #Will create local BLASTn database to search elements in
+def makeBlastBD(title, inputFilePath, out): #Will create local BLASTn database to search elements in
+    blastCommand = "makeblastdb -dbtype nucl -in {} -title {} -out {}".format(inputFilePath, title, out)
+    os.system(blastCommand)
 
+def searchBlastDB(queryFile, DBname, outputFile): #searches 1 element in the local BLASTn database
 
+     os.system("blastn -query {} -db {} -out {} -outfmt ""10 qstart qend evalue pident"".format(filePath,DBname,outputFile))
+    #Will search for all elements in query file as long as in fasta format
+    #Adds the start, end, evalue and p identity
 
-def searchBlastDB(): #searches 1 element in the local BLASTn database
-
-    #Method needs to return the blast output in a useable format
-    #looking for the e value start and end nucleotide and possiblely other stuff
-
-    #return a list with a predictable format of desired info
-    #or add all blast searches to a file (maybe two methods 1 for each)
+def searchBlastDBSingleSeq(queryFile, DBname, outputFile):
+    #Possible method to search a single element from collection at a time
