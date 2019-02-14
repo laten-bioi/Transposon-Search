@@ -11,4 +11,4 @@ def searchBlastDB(queryFile, DBname, outputFile): #searches 1 element in the loc
     #Adds the start, end, evalue and p identity
 
 def searchBlastDBSingleSeq(queryFile, DBname, outputFile):
-    #Possible method to search a single element from collection at a time
+    #Possible method to search a single element from collection at a times
