@@ -3,8 +3,8 @@ def main(): #main method
     with open('SoyFileLocation') as db: #need to add actual file path
         makeBlastBD('G.Max',db,'data' ) #need output location
 
-    with open('transposons') as query:
-        searchBlastDB('G.Max','GMR30_data/GMR30_ids.fasta','GMR30_data/results.txt') #add parameters
+    with open('GMR30_data/GMR30_ids.fasta') as query:
+        searchBlastDB('G.Max',query,'GMR30_data/results.txt') 
 
 
 
