@@ -1,18 +1,20 @@
-# Transposon-Search
-This project will update the locations of transposable elements in the updated Williams 82  genome assembly
+# Transposon-Search Background
+With the incredible amount of genomic information being produced every day, reference genomes that researchers depend upon for various kinds of genomic studies are updated frequently. This results in many versions of a species genome being publically available at any given time. This can create issues when research done in one version is set to be updated to the newest reference genome, especially for repetitive elements such as retrotransposons. 
 
-## The Plan (Probably)
+This project aims to create an algorithm that will be capable of taking the sequences and locations of repetitive elements from one reference genome version and locating the new positon of that element in the updated version. The algorithm will also catalogue changes to the updated sequence such as insertions or deletions. 
+
+
+## The Plan (As of 2/15)
 
 ### Step 1
-Get a pipeline working that is able to BLAST the elements from the GMR30.txt file (format is FASTA)
-The pipeline must be able to read search results for each element and then (I think) take the highest scoring/perfect hit locations and edit the corresponding ID list in the GMR30 IDs file. It will be important data is exported in a way that the start and end of elements is easily extracted, might have to play around with the BLAST search parameters.
-
+The script will first create a consensus sequence from a family of repeated elements using BLAST multiple sequence alignment. The consensus sequence will serve as a best representation of the family in question and limit the impact of outlier elements within the family. 
 
 ### Step 2
-Test pipeline by comparing the result of BLAST search to a few manual online BLAST searched and adjust as needed. Do an other required testing.
+Use Bowtie to perform a global sequence alignment with the consensus sequence to the reference genome. Hits from the global alignment can then be presumed to be the locations of that repetitive element family within the genome. Ensure that beginnings and ends of sequence are not removed in the allignment.
 
 ### Step 3
-Expand dataset to include other transposable elements of interest and follow same procedure.
+Analyze output from Bowtie search to give the locations of elements in the family and compare to original sequence lengths to find insertions and/or deletions.
+
 
 ### Additional Info
 All BLAST results for each element should be retained in someway that is yet to be
