@@ -1,6 +1,6 @@
 
 def createBlastBD(): #Will create local BLASTn database to search elements in
-
+#BLAST db no longer being used 
 
 
 def searchBlastDB(): #searches 1 element in the local BLASTn database
