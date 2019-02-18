@@ -8,7 +8,7 @@ def buildIndex():
         command = ''
         for line in paras:
             if line == 'INDEX':
-                search = line
+                search = paras.nextline()
     os.system(command)
 
 def searchIndex():
@@ -18,6 +18,5 @@ def searchIndex():
          command = ''
          for line in paras:
              if line == 'INDEX':
-                 command = line
+                 command = paras.nextline()
     os.system(command)
-        

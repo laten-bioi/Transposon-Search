@@ -1,4 +1,4 @@
 INDEX
-bowtie2-build -f /home/eholl/Documents/Laten/SoyGenes.fasta SoyIndex
+bowtie2-build -f /home/eholl/Documents/Laten/SoyGenes.fasta SoyIndex --threads 4
 SEARCH
 bowtie2 -x SoyIndex -f GMR30_data/Gmr30.fasta -S output/gmr30allignments.sam
