@@ -1,14 +1,17 @@
 import os
 
-def makeBlastBD(title, inputFilePath, out): #Will create local BLASTn database to search elements in
-    blastCommand = "makeblastdb -dbtype nucl -in {} -title {} -out {}".format(inputFilePath, title, out)
-    os.system(blastCommand)
+#assumes that the Gmax2.0 refernce genome is already good to go on PC
 
-def searchBlastDB(queryFile, DBname, outputFile): #searches 1 element in the local BLASTn database
+def buildIndex(fastaPath, indexName):
+    #will give option to build index from fasta file
 
-     os.system("blastn -query {} -db {} -out {} -outfmt ""10 qseqid qstart qend evalue pident"".format(filePath,DBname,outputFile))
-    #Will search for all elements in query file as long as in fasta format
-    #Adds the start, end, evalue and p identity
+    os.system("bowtie2-build {} -f {}").format(fastaPath, indexName)
+    os.system("echo index built")
+    return indexName
 
-def searchBlastDBSingleSeq(queryFile, DBname, outputFile):
-    #Possible method to search a single element from collection at a time
+
+def searchIndex(indexName, SamOutput,):
+    #searches updated index with the consensus seq and returns results to location in .sam
+    os.system()
+
+    
