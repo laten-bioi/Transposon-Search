@@ -10,8 +10,14 @@ def buildIndex(fastaPath, indexName):
     return indexName
 
 
-def searchIndex(indexName, SamOutput,):
+def searchIndex():
+    # reads command from the parameters file
     #searches updated index with the consensus seq and returns results to location in .sam
-    os.system()
 
-    
+    with open("parameters.txt") as paras:
+        #read so that method gets correct para lines
+        #read line into command
+        search = ""
+
+        os.system(search)
+        
