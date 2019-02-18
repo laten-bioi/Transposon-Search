@@ -1,3 +1,4 @@
-make index parameters
-
-search index parameters
+INDEX
+bowtie2-build -f /home/eholl/Documents/Laten/SoyGenes.fasta SoyIndex
+SEARCH
+bowtie2 -x SoyIndex -f GMR30_data/Gmr30.fasta -S output/gmr30allignments.sam
