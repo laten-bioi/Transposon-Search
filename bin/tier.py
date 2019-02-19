@@ -10,6 +10,7 @@ def buildIndex():
             if line == 'INDEX':
                 search = paras.nextline()
     os.system(command)
+    paras.close()
 
 def searchIndex():
     # reads command from the parameters file
@@ -20,3 +21,4 @@ def searchIndex():
              if line == 'INDEX':
                  command = paras.nextline()
     os.system(command)
+    paras.close()
